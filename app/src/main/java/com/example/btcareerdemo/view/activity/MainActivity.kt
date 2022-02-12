@@ -8,6 +8,9 @@ import com.example.btcareerdemo.R
 import com.example.btcareerdemo.model.businesslogic.UserDataDeleteWorker
 import com.example.btcareerdemo.model.businesslogic.UsersDataStoreWorker
 
+/**
+ * Main Activity of the application
+ */
 class MainActivity : AppCompatActivity() {
 
     private lateinit var workManager:WorkManager
@@ -19,12 +22,18 @@ class MainActivity : AppCompatActivity() {
         workManager = WorkManager.getInstance(applicationContext)
     }
 
+    /**
+     * This method is used to store the data into db
+     */
     fun storeUsersData() {
         var storeUserDataWorkRequest: OneTimeWorkRequest = OneTimeWorkRequest
             .Builder(UsersDataStoreWorker::class.java).build()
         workManager.enqueue(storeUserDataWorkRequest)
     }
 
+    /**
+     * This method will remove the data from db once activity is destroyed just for demo purpose
+     */
     fun removeUsersData() {
         var removeUserWorkRequest: OneTimeWorkRequest = OneTimeWorkRequest
             .Builder(UserDataDeleteWorker::class.java).build()

@@ -5,6 +5,9 @@ import com.example.btcareerdemo.model.entities.User
 import retrofit2.Call
 import retrofit2.http.GET
 
+/**
+ * Api interface for network call
+ */
 interface UserAPI {
 
     @GET(Constants.USERS_API_ENDPOINT)

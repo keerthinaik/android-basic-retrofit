@@ -6,6 +6,9 @@ import androidx.work.WorkerParameters
 import com.example.btcareerdemo.model.database.UserRepository
 import com.example.btcareerdemo.model.util.LocalUserStore
 
+/**
+ * Worker for adding all users into db
+ */
 class UsersDataStoreWorker(context: Context, workerParams: WorkerParameters) :
     Worker(context, workerParams) {
     override fun doWork(): Result {

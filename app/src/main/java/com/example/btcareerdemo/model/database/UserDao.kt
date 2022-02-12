@@ -7,6 +7,9 @@ import androidx.room.Insert
 import androidx.room.Query
 import com.example.btcareerdemo.model.entities.User
 
+/**
+ * Dao interface for User entity
+ */
 @Dao
 interface UserDao {
     @Insert

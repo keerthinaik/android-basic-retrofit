@@ -6,6 +6,9 @@ import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
+/**
+ * Api service class for making network calls
+ */
 class UserApiService {
 
     private val retrofit = Retrofit.Builder()

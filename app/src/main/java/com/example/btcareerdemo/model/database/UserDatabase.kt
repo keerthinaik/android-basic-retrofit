@@ -6,6 +6,9 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.btcareerdemo.model.entities.User
 
+/**
+ * database class which reprsents user db
+ */
 @Database(entities = [User::class], version = 1)
 abstract class UserDatabase: RoomDatabase() {
     abstract fun userDao(): UserDao
