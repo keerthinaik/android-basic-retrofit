@@ -1,7 +1,7 @@
 package com.example.btcareerdemo.model.network
 
 import com.example.btcareerdemo.model.util.Constants
-import com.example.btcareerdemo.model.User
+import com.example.btcareerdemo.model.entities.User
 import retrofit2.Call
 import retrofit2.http.GET
 
